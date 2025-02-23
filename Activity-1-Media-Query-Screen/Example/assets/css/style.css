@@ -1,0 +1,110 @@
+/* The * means "apply this to EVERYTHING on the webpage" */
+/* box-sizing: border-box tells the browser to include padding and borders in the width/height you set */
+
+/* Example without border-box:
+  If you make a box 100px wide and add 10px padding, it becomes 120px wide total!
+  (100px + 10px left padding + 10px right padding = 120px) 😫
+*/
+
+/* Example with border-box:
+  If you make a box 100px wide and add 10px padding, it stays 100px wide total!
+  The browser shrinks the inside to fit the padding 😊
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, Verdana, sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 60px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* When is a text decoration applied by default? */
+nav {
+   /* This collapses default paragraph margins and keeps the <p> inline */
+   display: flex;
+   background-color: #d8a47f;
+}
+
+nav p {
+  /*display: inline; */ /*(remove display: flex in nav)*/
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+}
+
+/* The aside means sidebar content and are children of the main element */
+aside {
+  flex: 30%;
+  background-color: #b9c6ae;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+section {
+  flex: 70%;
+  background-color: #fff;
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #13293d;
+  color: #fff;
+}
+
+/* Image Placeholders */
+.sample-img {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px;
+  height: 200px;
+  border: 1px solid black;
+}
+
+/* Media queries help make websites look good on different devices like phones, tablets, and computers */
+/* They detect the screen size and apply different styles when needed */
+
+/* IMPORTANT: When using `max-width`, we must write our rules from BIGGEST to SMALLEST screen sizes */
+/* This is like a water fall - starting with big screens and "falling down" to smaller ones */
+
+/* TABLET DEVICES (like iPads) */
+/* This rule activates when screen width is 992 pixels or LESS */
+/* 992px is about the width of a typical tablet in landscape mode */
+@media screen and (max-width: 992px) {
+  header {
+    background: #772014;  /* Changes header to dark red on tablets */
+  }
+}
+
+/* LARGE SMARTPHONES (like iPhone Plus models) */
+/* This rule activates when screen width is 768 pixels or LESS */
+/* 768px is about the width of a larger smartphone in landscape mode */
+@media screen and (max-width: 768px) {
+  nav {
+    background-color: #bb8588;  /* Changes navigation to pink on large phones */
+  }
+}
+
+/* SMALL SMARTPHONES (like regular iPhones) */
+/* This rule activates when screen width is 576 pixels or LESS */
+/* 576px is about the width of a typical smartphone in portrait mode */
+@media screen and (max-width: 576px) {
+  .sample-img {
+    background-color: #8ac4ff;  /* Changes image backgrounds to light blue on small phones */
+  }
+}
+
+/* Think of media queries like giving different instructions based on screen size: */
+/* - On regular computers (>992px): Everythi
