@@ -37,6 +37,3 @@ If you have completed the activity and want to further your knowledge, work thro
 * What are vendor prefixes, and how are they useful?
 
 Use [Google](https://www.google.com) or another search engine to research this.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

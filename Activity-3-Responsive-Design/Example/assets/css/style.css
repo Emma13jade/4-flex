@@ -15,7 +15,7 @@ header {
 }
 
 nav {
-  display: flex;
+  display: flex; /* Makes navigation a flex container */
   background-color: #d8a47f;
 }
 
@@ -27,20 +27,23 @@ nav a {
 }
 
 main {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex; /* Makes main a flex container */
+  flex-wrap: wrap; /* Allows flex items to wrap to next line if needed */
+  /* By default, the aside and section will be side-by-side */
 }
 
 aside {
-  flex: 1;
+  flex: 1;  /* Shorthand for flex-grow: 1, flex-shrink: 1, flex-basis: 0% 
+  When set to 0%, the item starts with no inherent size, and sizing is based entirely on the flex-grow proportion */
   background-color: #b9c6ae;
   padding: 20px;
 }
 
 section {
-  flex: 3;
+  flex: 3;  /* Takes 3 times as much space as the aside */
   background-color: #fff;
   padding: 20px;
+    /* Will take up 3/4 of the space when next to aside with flex: 1 */
 }
 
 .sample-img {
@@ -64,9 +67,20 @@ footer {
   nav {
     flex-direction: column;
   }
-  /* Make the sidebar stack below the body */
+  /* Make the sidebar stack below the body 
+  
+  We use the comma to target both the aside and section elements instead of writing the same styles twice
+  main {
+  flex-direction: column;
+  }
+  nav {
+    flex-direction: column;
+  }*/
   aside {
-    order: 2;
+    order:2;
+     /* Higher number than default (0), so it appears after section */
+    /* This reverses the visual order, putting the sidebar below the main content */
+    /* The section element keeps its default order: 0 */
   }
   /* Change the header background */
   header {
