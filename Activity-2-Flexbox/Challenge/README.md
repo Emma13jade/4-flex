@@ -33,3 +33,5 @@ If you have completed the activity and want to further your knowledge, work thro
 * By default, flexbox runs in rows, left to right. In what other directions could it run?
 
 Use [Google](https://www.google.com) or another search engine to research this.
+
+* Check out more about Flexbox here https://www.w3schools.com/css/css3_flexbox.asp
